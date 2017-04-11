@@ -78,13 +78,18 @@ body{
     color:#222222;
     font-weight:100;
     text-transform: capitalize;
+    display: inline-block;
    
+}
+.section-center{
+    margin: 35px;
+    text-align: center;
 }
 .underline{
     
-    width: 29%;
+    margin-left: 0px;
     border: 1px solid #c8ad7f;
-    margin-left: 36%;
+    
 }
 
 .row-pad-marg, .container-pad-mar{
@@ -444,9 +449,6 @@ margin:0;
 /************Media queries-Manu***********/
 
 @media(min-width:1200px){
-.underline{
-     margin-left: 35.5%;
-}
 
 
 
@@ -464,10 +466,7 @@ margin-top:0%;
 }
 @media(min-width:992px) and (max-width:1199px){
 
-.underline{
-    width: 35.5%;
-    margin-left: 32%;
-}
+
 
 /*Index page*/
 
@@ -508,10 +507,7 @@ padding-left:10%;
 
 @media(max-width:991px) and (min-width:768px){
     
-    .underline{    
-    width: 45.5%;
-    margin-left: 27%;
-    }
+  
 
 /*Index page*/
 .about-para{
@@ -603,10 +599,7 @@ padding-left:20%;
 
 @media(max-width:767px) and (min-width:650px){
 
-    .underline{    
-    width: 46.5%;
-    margin-left: 27%;
-    }
+   
 
   .section-heading {
     text-align: center;
@@ -702,11 +695,7 @@ margin-left: 47px;
 
 @media(max-width:649px) and (min-width:530px){
  
-    .underline{    
-    width: 46.5%;
-    margin-left: 27%;
-    }
-
+   
   .section-heading {
     text-align: center;
     font-size: 30px;
@@ -822,11 +811,7 @@ margin-left: 47px;
 
 @media(max-width:529px) and (min-width:480px){
  
-    .underline{    
-    width: 46.5%;
-    margin-left: 27%;
-    }
-
+   
   .section-heading {
     text-align: center;
     font-size: 30px;
@@ -946,10 +931,7 @@ margin-left: 47px;
 
 @media(max-width:479px) and (min-width:375px){
  
-   .underline{    
-    width: 67%;
-    margin-left: 16%;
-    }
+   
 
   .section-heading {
     text-align: center;
@@ -1071,11 +1053,7 @@ margin-left: 29px;
 .banner img{
 
    }
-   .underline{    
-    width: 73%;
-    margin-left: 13%;
-    }
-
+  
     .section-heading {
     text-align: center;
     font-size: 22px;

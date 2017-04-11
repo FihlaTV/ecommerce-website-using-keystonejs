@@ -3,21 +3,23 @@ extends ../layouts/default
 block content
 
 	section.banner
-		img(src='../images/inner-banner.jpg')
+		img(src=Abouts.image.first)
 	.heading-margin
-		h1.section-heading1 Our Brands
+		h1(class="section-heading1")=Abouts.page_name
 		hr.ourbrands
 	section.container
 		div
 			.col-md-3.col-sm-3.col-xs-12.section-image
-				img(src='../images/Designer-Damasks.jpg', width='100%')
+				img(src=Abouts.image.second, width='100%')
 			
 			.col-md-9.col-sm-9
-				p.section-para1 Artisanindia wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
-				img.img-brand(src='../images/Brands-1024x207.jpg', width='90%')
+				p.section-para1=Abouts.content.first
+				//- Artisanindia wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
+				img.img-brand(src=Abouts.image.third, width='90%')
 				<br><br>
-				h4(style='padding-left: 20px')   Our Partners
-				p.section-para1 Artisanindia wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
+				h4(style='padding-left: 20px')=Abouts.content.second  
+				p.section-para1= Abouts.content.third
+				//- Artisanindia wallpaper represents the finest brands in wall-covering. Each designer wallpaper brand celebrates a unique style for an inclusive collection of stunning wall fashion. Our wallpapers include everything from eccentric to traditional, with designers specializing in intriguing textured wallpaper and grasscloth, brands that bring a luxurious sheen to walls and timeless charms.
 					
 
 	//- .container: .jumbotron

@@ -3,23 +3,28 @@ extends ../layouts/default
 block content
 
 	section.banner
-		img(src='./images/inner-banner.jpg')
+		img(src=Getins.image.first)
 	.heading-margin
-		h1.section-heading1 GET IN TOUCH
+		h1(class="section-heading1")=Getins.page_name
 		hr.getintouch
 	section.container.pad
 		div
-			p.subheading.pad Reach Us At
-			img.mar(src='./images/bordr.jpg')
+			p.subheading.pad=Getins.content.first
+			img.mar(src=Getins.image.second)
 		div
-			p.section-para2 	We love to listen and we are eagerly waiting to talk to you regarding your project. Post any queries you have and we will get<br>back to you as soon as possible.
+			p.section-para2=Getins.content.second
+			p.section-para2=Getins.content.third
 		.row
 			.col-md-4.col-sm-4
-				p.para Artisan Furnishings Contact <br><br>C-143, Lajpat Nagar 1<br>New Delhi – 110024
+				p.para=Getins.content.fourth
+						=Getins.content.fifth
+						br
+						=Getins.content.six
 			.col-md-4.col-sm-4
-				p.para artisandecor@artisanindia.com
+				p.para=Getins.content.seven
 			.col-md-4.col-sm-4
-				p.para 011-41749046, 41005869, 41028554<br><br>+91- 9205974003
+				p.para= Getins.content.eight
+						= Getins.content.nine
 
 		.col-md-5.col-sm-5.pad
 			div

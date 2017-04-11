@@ -2,30 +2,38 @@ extends ../layouts/default
 
 block intro
     .container.collection-container
-        .section-header
+        //- .section-center
             h1.section-heading= Product.category
+                hr.underline
         .section-height
             .col-md-3
                 section.base-col
+                    form.form-inline(role="search", action="/search", method="GET")
+                        fieldset.pad
+                            
+                            input.form-part2(type="text", id="keywords", name="keywords", placeholder="search") 
+                            <i class="fa fa-search fa-spacing ico" aria-hidden='true'></i>    
+                        fieldset.pad.pad5
+                            button.btn.btn-default.butto(type='submit') Search
                     h3.filter-heading base colour
                     ul.filter-list
                         li
-                            input(type = 'checkbox' name = 'color' value = 'BLUE')#cb1
+                            input(type = 'checkbox' name = 'color' class="color" value = 'BLUE')#cb1
                             label(for = 'cb1') blue
                         li
-                            input(type = 'checkbox' name = 'color' value = 'GREEN')#cb2
+                            input(type = 'checkbox' name = 'color'  class="color" value = 'GREEN')#cb2
                             label(for = 'cb2') green
                         li
-                            input(type = 'checkbox' name = 'color' value = 'YELLOW')#cb3
+                            input(type = 'checkbox' name = 'color' class="color" value = 'YELLOW')#cb3
                             label(for = 'cb3') yellow
                         li
-                            input(type = 'checkbox' name = 'color' value = 'RED')#cb4
+                            input(type = 'checkbox' name = 'color' class="color" value = 'RED')#cb4
                             label(for = 'cb4') red
                         li
-                            input(type = 'checkbox' name = 'color' value = 'GREY')#cb5
+                            input(type = 'checkbox' name = 'color' class="color" value = 'GREY')#cb5
                             label(for = 'cb5') grey
                         li.cb1
-                            input(type = 'checkbox' name = 'color' value = 'BLACK')#cb6
+                            input(type = 'checkbox' name = 'color' class="color" value = 'BLACK')#cb6
                             label(for = 'cb6') BLACK
                         li.cb1
                             input(type = 'checkbox' name = 'color' value = 'WHITE')#cb7
@@ -178,6 +186,15 @@ block intro
                             h3= product.prod_name
                 else
                     h1.error-msg No Item Under this Category
+            
+            //- script.
+            //-     $(function(){
+            //-         var test = localStorage.input === 'true'? true: false;
+            //-         $('checkbox').prop('checked', test || false);
+            //-     });
 
-
-
+            //-     $('input').on('change', function() {
+            //-         localStorage.checkbox = $(this).is(':checked');
+            //-         console.log($(this).is(':checked'));
+            //-     });
+ 

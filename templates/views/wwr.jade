@@ -3,22 +3,24 @@ extends ../layouts/default
 block content
 
 	section.banner
-		img(src='../images/inner-banner.jpg')
-	.heading-margin
-		h1.section-heading1 Who We Are
-		hr.wwa
+		img(src=Abouts.image.second)
+	.section-center
+		h1(class="section-heading")= Abouts.page_name
+			hr.underline
 	section.container
 		div
 			.col-md-3.col-sm-3.col-xs-12.section-image
-				img(src='../images/who-we-are.jpg', width='100%')
+				img(src=Abouts.image.first, width='100%')
 			
 			.col-md-9.col-sm-9
-				p.section-para1 ARTISAN Furnishings Pvt Ltd imports and distributes premier Wallcovering brands, and develops and markets a broad range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA,Europe and Japan. ARTISAN was established in the year 2003. Over the last 12 years, 
+				p.section-para1=Abouts.content.first
+				//- ARTISAN Furnishings Pvt Ltd imports and distributes premier Wallcovering brands, and develops and markets a broad range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA,Europe and Japan. ARTISAN was established in the year 2003. Over the last 12 years, 
 					|	the Artisan network expanded to other cities in India with a wide network of over 500 distributors and dealers across the country. We built a reputation for reliable service and wide product offering at an excellent price performance ratio. Wherever we do business, we take great pride in our commitment to meeting our customers’ unique demands with the utmost responsiveness, efficiency and courtesy. ARTISAN has dramatically enhanced the perception of both Vinyl and Paper Backed wallcoverings by making design the main focus.
 				
 				
 				
-				p.section-para1 The range of designs in our collections reflects current as well as future design trends. Our in-house curated collections feature hand picked designs chosen from top suppliers in Japan & the US for both the commercial as well as residential markets. Artisan provides interior solutions to architects, designers, contractors and facility managers. We continue to work with many high profile hotels, commercial buildings, restaurants, architects, designers and
+				p.section-para1= Abouts.content.second
+				//- The range of designs in our collections reflects current as well as future design trends. Our in-house curated collections feature hand picked designs chosen from top suppliers in Japan & the US for both the commercial as well as residential markets. Artisan provides interior solutions to architects, designers, contractors and facility managers. We continue to work with many high profile hotels, commercial buildings, restaurants, architects, designers and
 					|	 high-end residential customers throughout India providing beautiful colors, modern designs and amazing textures that enhance the beauty of the interiors. We carry a wide range of durable & sustainable wallcoverings that are Fire Retardant, Eco Friendly and confirm to the highest international Building Standards and Project Specifications. ARTISAN looks forward to building a strong sustainable relationship with our customers
 					
 	//- .container: .jumbotron

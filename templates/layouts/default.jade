@@ -20,6 +20,7 @@ html
 		link(href="/styles/style.css", , rel="stylesheet")
 		link(href="/styles/collections.css", , rel="stylesheet")
 		link(href="/styles/bootstrap/_bootstrap.scss", , rel="stylesheet")
+		script(src="/js/myscript.js")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -39,7 +40,7 @@ html
 		block head
 
 	//- HTML BODY
-	body
+	body(onload="javascript:applySetting()")
 
 		//- HEADER
 		header
@@ -86,6 +87,9 @@ html
 										a.pad2(href='/product-info/Warranty') Warranty
 							li
 								a(href='/getintouch') GET IN TOUCH
+							
+							
+							
 
 		//- BODY
 		#body
@@ -193,6 +197,8 @@ html
 		//- them specifically here, instead of bootstrap-3.3.5.min.js
 		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
 		script(src='/js/style.js')
+		script(src='/js/myscript,js')
+		script(type="text/javascript",src="/js/cookie.js")
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone

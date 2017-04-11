@@ -10,5 +10,6 @@ exports = module.exports = function (req, res) {
 	locals.section = 'home';
 
 	// Render the view
+	view.query('Homes', keystone.list('Home').model.findOne({'name' : 'home'}));
 	view.render('index');
 };

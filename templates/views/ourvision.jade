@@ -5,26 +5,30 @@ block content
 	section.banner
 		img(src='../images/inner-banner.jpg')
 	.heading-margin
-		h1.section-heading1 Our Vision
+		h1(class="section-heading1")= Abouts.page_name 
 		hr.ourvision
 	section.container
 		div
 			.col-md-3.col-sm-3.col-xs-12.section-image
-				img(src='../images/Designer-Damasks.jpg', width='100%')
+				//- img(src='../images/Designer-Damasks.jpg', width='100%')
 			
 			ul.col-md-9.col-sm-9.col-xs-12.ul-dot
 				li.section-para1
 					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
-					|	 To import and distribute only the best quality of wallcoverings from reputed manufacturers across the world.
+					=Abouts.content.first
+					//- |	 To import and distribute only the best quality of wallcoverings from reputed manufacturers across the world.
 				li.section-para1
 					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
-					|	 To continuously add new products that reflects the latest trends in colour, texture and design.
+					=Abouts.content.second
+					//- |	 To continuously add new products that reflects the latest trends in colour, texture and design.
 				li.section-para1
 					span#tick.fa.fa-check.fa-spacing(aria-hidden='true') 
-					|	To provide a professional level of service that ensures 100% customer satisfaction.
+					=Abouts.content.third
+					//- |	To provide a professional level of service that ensures 100% customer satisfaction.
 				li.section-para1
 					span#tick.fa.fa-check.fa-spacing(aria-hidden='true')
-					|	 To be a responsible organization by promoting the use of Eco Friendly and Sustainable products
+					=Abouts.content.fourth
+					//- |	 To be a responsible organization by promoting the use of Eco Friendly and Sustainable products
 	
 					
 

@@ -39,16 +39,19 @@ exports = module.exports = function (app) {
 
 	app.get('/aboutus/who-we-our', function(req, res){
 		var view = new keystone.View(req, res);
+		view.query('Abouts', keystone.list('About').model.findOne({'name' : 'Who We Are'}));
 		view.render('wwr')
 	});
 
 	app.get('/aboutus/our-vision', function(req, res){
 		var view = new keystone.View(req, res);
+		view.query('Abouts', keystone.list('About').model.findOne({'name' : 'Our_Vision'}));
 		view.render('ourvision')
 	});
 
 	app.get('/aboutus/our-brands', function(req, res){
 		var view = new keystone.View(req, res);
+		view.query('Abouts', keystone.list('About').model.findOne({'name' : 'Our Brands'}));
 		view.render('ourbrands')
 	});
 
@@ -65,6 +68,7 @@ exports = module.exports = function (app) {
 	app.get('/product-info/Maintenance', function(req, res){
 		var view = new keystone.View(req, res);
 		view.render('maint')
+
 	});
 
 	app.get('/product-info/Warranty', function(req, res){
@@ -74,12 +78,35 @@ exports = module.exports = function (app) {
 
 	app.get('/getintouch', function(req, res){
 		var view = new keystone.View(req, res);
+		view.query('Getins', keystone.list('Getin').model.findOne({'name' : 'getintouch'}));
 		view.render('getintouch')
 	});
 
 	app.get('/collections', routes.views.Collections.collection);
 
-	app.get('/collections/:collectionname', routes.views.Collections.products)
+	app.get('/collections/:collectionname', routes.views.Collections.products);
+	// app.get('/search', routes.views.Collections.search);
+	app.get('/search', function(req, res){
+		var view = new keystone.View(req, res);
+		 filters = {
+        keywords: req.query.keywords
+    };
+
+    data = {
+        products:[],
+        keywords: "",
+    };
+	// console.log(filters.keywords.split(" "));
+		view.query('products', keystone.list('Product').model.find(
+		  {$text: {$search : filters.keywords } },
+            {score : {$meta: "textScore"} }).sort({score : {$meta : 'textScore'} }). limit(20)
+			
+        
+       
+		);	
+		
+		view.render('products_page');
+});
 
 	// app.get('/collections/ashford',  routes.views.Collections.products);
 

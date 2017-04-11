@@ -12,21 +12,21 @@ block content
 		//Wrapper for slides
 		.carousel-inner(role="listbox")
 			.item.active
-				img(src="./images/banner-4.jpg", alt="")
-				p.caption
-					|	Geometrical patterns, retro designs, fine stripes or clear plains sets fashion trends for your home.
+				img(src=Homes.image.first, alt="")
+				p.caption=Homes.content.first
+					//- |	Geometrical patterns, retro designs, fine stripes or clear plains sets fashion trends for your home.
 			.item
-				img(src="./images/slider-3.jpg", alt="")
-				p.caption
-					|	Textile plains, a canvas structure, metallic plains or mosaic designs with metallic effects give your rooms a modern touch.
+				img(src=Homes.image.second, alt="")
+				p.caption=Homes.content.second
+					//- |	Textile plains, a canvas structure, metallic plains or mosaic designs with metallic effects give your rooms a modern touch.
 			.item
-				img(src="./images/slider-2.jpg", alt="")
-				p.caption
-					|	A rich collection with structural and material effects alternating between style and bright.
+				img(src=Homes.image.third, alt="")
+				p.caption=Homes.content.third
+					//- |	A rich collection with structural and material effects alternating between style and bright.
 			.item
-				img(src="./images/slider-1.jpg" alt="")
-				p.caption
-					|	Motifs, material and volume effects illustrate a geometric collection that set contemporary moods for your rooms.
+				img(src=Homes.image.fourth, alt="")
+				p.caption=Homes.content.fourth
+					//- |	Motifs, material and volume effects illustrate a geometric collection that set contemporary moods for your rooms.
 		//Left and right controls
 		a.left.carousel-control(href="#myCarousel", role="button", data-slide="prev")
 			span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
@@ -38,56 +38,57 @@ block content
 	section
 		.container
 			.row.row1-height
-				h1.home-heading Decorate With Artisan
-				p.home-para
-					|	ARTISAN Furnishings Pvt Ltd, leader in importing and distributing & developing Wallcovering, provides with a varied range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA, Europe and Japan.
+				h1.home-heading=Homes.content.fifth 
+				//- Decorate With Artisan
+				p.home-para=Homes.content.sixth
+					//- |	ARTISAN Furnishings Pvt Ltd, leader in importing and distributing & developing Wallcovering, provides with a varied range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA, Europe and Japan.
 
 		.row.row-color
 			.col-md-6.col-row-padd-marg
-				img(src="./images/slider-2.jpg", width="100%")
+				img(src=Homes.image.fifth, width="100%")
 
 			.col-md-5.col-md-offset-1.col-row-padd-marg.row-bootstrap
 				.content
-					h1.about-heading About
-					.about-para
-						| ARTISAN Furnishings Pvt Ltd imports and distributes premier Wall covering brands, and develops & markets a broad range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA, Europe and Japan. ARTISAN was established in the year 2003. Over the last 12 years, the Artisan network expanded to other cities in India with a wide network of over 500 distributors and dealers across the country.
+					h1.about-heading=Homes.content.seventh 
+					.about-para=Homes.content.eighth
+						//- | ARTISAN Furnishings Pvt Ltd imports and distributes premier Wall covering brands, and develops & markets a broad range of commercial grade quality products for the Hospitality Industry, Corporate Buildings and Residential Market manufactured by the world’s leading manufacturers located in USA, Europe and Japan. ARTISAN was established in the year 2003. Over the last 12 years, the Artisan network expanded to other cities in India with a wide network of over 500 distributors and dealers across the country.
 					a.know-more-button(href="./au/ww are.htm") know more
 
 		.row.row-color.col-row-padd-marg
-			h3.home-heading.product Products
+			h3.home-heading.product=Homes.content.nine
 			.col-md-4.col-row-padd-marg
-				a(href="https://www.youtube.com/watch?v=pNHDpXlKI4o", target="blank")
-				img.product-image(src="./images/video-1.jpg")
+				a(href=Homes.content.twelve, target="blank")
+				img.product-image(src=Homes.image.thirteen)
 			.col-md-4.col-row-padd-marg
-				a(href="https://www.youtube.com/watch?v=LAtwVs3wmZ4", target="blank")
-				img.product-image(src="./images/video-2.jpg")
+				a(href=Homes.content.thirteen, target="blank")
+				img.product-image(src=Homes.image.fourteen)
 			.col-md-4.col-row-padd-marg
-				a(href="https://www.youtube.com/watch?v=-TfqEIhI9sU", target="blank")
-				img.product-image(src="./images/video-1.jpg")
+				a(href=Homes.content.fourteen, target="blank")
+				img.product-image(src=Homes.image.fifteen)
 
 		.row.row-color.row-about.col-row-padd-marg
-			h3.home-heading.product Our Brands
+			h3.home-heading.product=Homes.content.ten 
 			.brands
-			img(src="./images/Brands-1024x207.jpg", width="100%")
+			img(src=Homes.image.six, width="100%")
 	
 		.row-coverings.wall-padding
 			div
-				h3.home-heading.product Why Wall Coverings?
+				h3.home-heading.product=Homes.content.eleven
 			.container
 				.row
 					div
 						.col-md-2.col-sm-5.col-xs-5.why-wall-pos-grid
-							img.wall-img(src="./images/2.png")
+							img.wall-img(src=Homes.image.seven)
 						.col-md-2.col-sm-5.col-xs-5
-							img.wall-img(src="./images/3.png")
+							img.wall-img(src=Homes.image.eight)
 						.col-md-2.col-sm-5.col-xs-5.why-wall-pos-grid
-							img.wall-img(src="./images/4.png")
+							img.wall-img(src=Homes.image.nine)
 						.col-md-2.col-sm-5.col-xs-5
-							img.wall-img(src="./images/5.png")
+							img.wall-img(src=Homes.image.ten)
 						.col-md-2.col-sm-5.col-xs-5.why-wall-pos-grid
-							img.wall-img(src="./images/6.png")
+							img.wall-img(src=Homes.image.eleven)
 						.col-md-2.col-sm-5.col-xs-5
-							img.wall-img(src="./images/1.png")
+							img.wall-img(src=Homes.image.twelve)
 						
 					
 				
@@ -99,34 +100,4 @@ block content
 
 
 
-	//.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-
-
-
-
-
-
-
-
-
-
-
+	
